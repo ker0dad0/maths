@@ -1,0 +1,299 @@
+/* Style pour le header */
+header {
+    background-color: #2a3d56;
+    color: #e8e8e8;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #e8e8e8;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Style pour le main */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    display: inline-block;
+    background-color: #2a3d56;
+    color: #e8e8e8;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  a:hover {
+    background-color: #666;
+  }
+  
+  /* Style pour le footer */
+  footer {
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+  }
+
+
+  
+
+  /* Style pour le formulaire de contact */
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form label,
+  form input,
+  form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input,
+  form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form textarea {
+    height: 150px;
+  }
+  
+  form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #16a085;
+  }
+  
+  /* Style pour les liens des réseaux sociaux */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 10%;
+    background-color: #a1a0a0;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+  }
+  
+  .social-links a:hover {
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+  
+  .social-links .fa {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+
+
+
+  /*tarifs*/
+  .pricing-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scrollbar-width: none; /* remove scrollbar */
+    -ms-overflow-style: none; /* remove scrollbar for Edge and IE */
+  }
+  
+  .pricing-card {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pricing-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .pricing-card p.price {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pricing-card li {
+    margin-bottom: 10px;
+  }
+  
+  .pricing-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pricing-navigation button {
+    margin: 0 10px;
+    font-size: 24px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #ccc;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .pricing-navigation button:hover {
+    background-color: #555;
+  }
+  
+  .pricing-navigation button:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  
+
+
+  /* Styles pour la section des cours */
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+  }
+  
+  .course-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    margin: 0 20px 40px 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .course-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .course-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .course-description {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .course-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .course-button {
+    width: 80%;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .course-button:hover {
+    background-color: #d62828;
+  }
+  
+  /* Media queries pour les écrans plus petits */
+  @media only screen and (max-width: 768px) {
+    .courses {
+      justify-content: center;
+    }
+    
+    .course-card {
+      margin: 0 10px 30px 10px;
+    }
+  }
+  
