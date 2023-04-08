@@ -19,8 +19,9 @@
 
     <!-- Header avec image -->
   <header class="header-contact">
-    <img src="img/logo.jpg" alt="Photo de présentation" width="400" height="100">
-  <!--  <h1>Contactez-moi</h1> -->
+	<center>
+		<img src="img/logo.png" alt="Photo de présentation" width="400" height="100">
+	  </center>
   </header>
 
   <!-- Contenu de la page -->
@@ -28,16 +29,15 @@
 	<main>
 		<section>
 			
-			<p>le détails de la recette.</p>
 			
 			<form action="send-email.php" method="post">
 				<label for="nom">Nom de la recette:</label>
 				<input type="text" id="nom" name="nom" required><br>
 				
-				<label for="message">les ingrédients :</label>
+				<label for="message">Les ingrédients:</label>
 				<textarea id="message" name="message" required></textarea><br>
 				
-				<label for="message">méthode de préparation :</label>
+				<label for="message">Méthode de préparation:</label>
 				<textarea id="message" name="message" required></textarea><br>
 				
 				<button type="submit">Envoyer</button>
