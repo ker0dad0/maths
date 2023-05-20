@@ -1,0 +1,362 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+p{
+    font-weight: 300;
+    color: #111;
+}
+
+header{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  padding: 30px 50px;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  background-color: rgb(214, 201, 178);
+  color: #ffffff;
+}
+
+
+.logo{
+  color: #ffffff;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2em;
+  text-decoration: none;
+}
+.logo span{
+  color: #ffffff;
+}
+
+
+body {
+  display: flex;
+  height: 180vh;
+  background: rgb(241, 237, 229);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+section {
+  background-color: #ffffff;
+  padding: 40px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+section h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+section a {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: rgb(214, 201, 178);
+  text-decoration: underline;
+  font-weight: 800;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin: 5px 0;
+    padding: 5px 5px;
+    outline: 0;
+    border: 1px solid#000;
+    border-radius: 6px;
+}
+
+
+
+form input[type='submit'] {
+  background-color: rgb(214, 201, 178);
+  border: 0;
+  font-size: 15px;
+  color: #ffffff;
+  margin-top: 15px;
+  padding: 6px 0;
+
+}
+
+
+form textarea {
+    margin: 5px 0;
+    padding: 5px 5px;
+    outline: 0;
+    border: 1px solid#000;
+    border-radius: 6px;
+}
+
+/*******************************************/
+.profile {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 80%;
+  width: 70px;
+  height: 70px;
+  font-size: 16px;
+  margin-right: 650px;
+  color:rgb(214, 201, 178);
+  font-weight: 800;
+  transition: all 0.1s ease;
+
+}
+
+.profile-button:hover {
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.profile-dropdown {
+  position: absolute;
+  width: 200px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+ top: 100%; /* Set the top position to 50% */
+  right: 83%; /* Set the left position to 50% */
+}
+
+
+.profile:hover .profile-dropdown {
+  opacity: 1;
+  visibility: visible;
+  top: 50px;
+}
+
+.profile-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-dropdown li {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #040303;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.profile-dropdown li a{
+  padding: 10px 15px;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(214, 201, 178);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 800;
+  text-decoration: none;
+}
+.profile-dropdown li:hover {
+  background-color: #f1f1f1;
+}
+
+.profile-dropdown .btn-reserve {
+  display: block;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 8px;
+  background-color: rgb(214, 201, 178);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.profile-dropdown .btn-reserve:hover {
+  background-color: #0b7dda;
+}
+
+
+
+.search{
+    background-color: noir;
+    position: relative;
+    width: 20%;
+}
+
+.search img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+}
+
+input[type="text"]{
+    max-width: 300px;
+    width: 80%;
+    height: 50px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 10px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+  
+/*********** Blocks recettes ******************/
+
+
+
+.container-recettes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    width: 100%;
+    padding: 50px;
+    gap: 30px;
+    max-width: 2200px;
+    margin-top: 100px;
+}
+
+
+
+.block-recette{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.479);
+}
+
+
+
+
+.devant{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    transition: filter 0.4s ease-in-out;
+}
+
+.devant img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+    height: 0;
+    overflow: hidden; 
+    color: white;
+    background-color: rgb(214, 201, 178);
+    transition: height 0.4s ease-in-out;
+}
+
+.overlay h4{
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+}
+
+.block-recette:hover .overlay{
+    height: 40%;
+}
+
+.block-recette:hover .devant{
+    filter: blur(2px);
+}
+
+.btn-instruction{
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: clamp(15px, 2vw, 25px);
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden; 
+    border: none;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.459);
+    font-family: 'Karma', serif;
+}
+
+.btn-instruction a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn-instruction::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 0;
+    transform: translate(-50%, -50%) rotate(26deg);
+    background-color: #dbde0f;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-instruction:hover::after{
+    height: 250%;
+}
+
+.btn-instruction:hover a{
+    color: white;
+}
+
+.derriere .recette-instruction {
+    font-size: 30px;
+}

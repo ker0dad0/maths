@@ -1,0 +1,232 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+p{
+    font-weight: 300;
+    font-style: italic;
+    color:#111;
+}
+
+header{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  padding: 30px 50px;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  background-color: rgb(214, 201, 178);
+  color: #ffffff;
+}
+
+
+.logo{
+  color: #d9efe8;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2em;
+  text-decoration: none;
+}
+.logo span{
+  color: #d9efe8;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180vh;
+  background: rgb(241, 237, 229);
+  color: rgb(214, 201, 178);
+  }
+
+
+
+/*******************************************/
+.profile {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  }
+  
+  .profile-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 80%;
+  width: 70px;
+  height: 70px;
+  font-size: 16px;
+  margin-right: 650px;
+  color:rgb(214, 201, 178);
+  font-weight: 800;
+  transition: all 0.1s ease;
+  
+  }
+  
+  .profile-button:hover {
+  background-color: #ffffff;
+  color: #ffffff;
+  }
+  
+  .profile-dropdown {
+  position: absolute;
+  width: 200px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  top: 100%; /* Set the top position to 50% */
+  right: 83%; /* Set the left position to 50% */
+  }
+  
+  
+  .profile:hover .profile-dropdown {
+  opacity: 1;
+  visibility: visible;
+  top: 50px;
+  }
+  
+  .profile-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+  
+  .profile-dropdown li {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #040303;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  }
+  .profile-dropdown li a{
+  padding: 10px 15px;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(214, 201, 178);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 800;
+  text-decoration: none;
+  }
+  .profile-dropdown li:hover {
+  background-color: #f1f1f1;
+  }
+  
+  .profile-dropdown .btn-reserve {
+  display: block;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 8px;
+  background-color: rgb(214, 201, 178);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  }
+  
+  .profile-dropdown .btn-reserve:hover {
+  background-color: #0b7dda;
+  }
+  
+
+  /*****************Notifications********************/
+
+.notifications {
+    background-color: #d9efe8;
+    padding: 50px;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
+  .notifications h2 {
+    margin-top: 0;
+  }
+  
+  .notifications ul {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+  }
+  
+  .notifications li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .notifications li.pending {
+    background-color: #ffcc00;
+  }
+  
+  .notifications li.accepted {
+    background-color: #00cc66;
+  }
+  
+  .notifications li.rejected {
+    background-color: #ff0033;
+  }
+
+
+  /***************** Searh barre ****************/
+
+  .container-search{
+    display: flex;
+    max-width: 250px;
+    width: 20%;
+    margin-top: 2px;
+    margin-left: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.search{
+  background-color: noir;
+  position: relative;
+  width: 20%;
+}
+
+.search img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+}
+
+input[type="text"]{
+  max-width: 300px;
+  width: 80%;
+  height: 50px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 10px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}

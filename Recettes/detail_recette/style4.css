@@ -1,0 +1,401 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f4f4f4;
+}
+  p{
+    font-weight: 300;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(11, 10, 8);
+    margin-bottom: 200px;
+    margin-left: 100px;
+}
+
+
+header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    padding: 30px 50px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    background-color: rgb(214, 201, 178);
+    color: #ffffff;
+}
+
+
+.logo{
+    color: #ffffff;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2em;
+    text-decoration: none;
+}
+.logo span{
+    color: #ffffff;
+}
+
+
+
+a{
+    text-decoration: none;
+    font-family: 'Karma', serif;
+}
+
+.titre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+}
+
+.titre h1 {
+    color: #ffffff;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.titre img{
+    max-width: 50px;
+    width: 10%;
+}
+
+nav{
+    position: absolute;  
+    z-index: -1;
+    text-align: center;
+    bottom: 0;
+    font-size: 30px;
+    letter-spacing: 2px;
+    height: 50px; 
+    width: 100%;
+    transition: bottom 0.2s ease-in-out;
+    border-bottom: 1px solid black;
+    background: #cbbfbf;
+}
+
+.titre:hover nav{
+    bottom:  -49px;
+}
+
+nav a{
+    position: relative;
+    color: rgb(35, 32, 32);
+    font-weight: 900;
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background-color: rgb(35, 28, 28);
+    transition: width 0.2s ease-in-out;
+}
+
+nav a:hover::after{
+    width: 80%;
+}
+
+/******************** main *******************/
+
+main{
+    position: relative;
+    z-index: 90;
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    margin: 130px auto ;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.493);
+}
+
+.container-image{
+    shape-outside: circle();  
+    height: 300px;
+    width: 300px;
+    float: left;
+    margin-right: 300px;
+}
+
+.container-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 80%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.678);
+}
+
+
+
+/********** block ingredients **************/
+
+.ingredients .btn-ingredient{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    top: 0;
+    border: none;
+    padding-right: 100px;
+    padding-top: 5px;;
+    padding-left: 10px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    background-color: rgb(6, 5, 4);
+    color: white;
+    font-family: 'Karma', serif;
+    transition: right 0.4s ease-in-out;
+}
+
+main:hover .btn-ingredient{
+    right: -40px; 
+}
+
+.liste-ingredient{
+    position: absolute;
+    width: 250px;
+    font-size: 20px;
+    padding: 10px 25px;
+    opacity: 0;
+    visibility: hidden;
+    background: #ffffff;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.liste-ingredient h4{
+    font-size:25px;
+    margin-bottom: 20px;
+   
+}
+
+.btn-ingredient:focus + .liste-ingredient{
+    opacity: 1;
+    visibility:visible;
+}
+
+
+
+
+
+.block-instruction a{
+    float: right;
+    color: black;
+    font-style: italic;
+}
+
+.marinade h3,
+.instructions h3{
+    font-size: clamp(25px, 6vw, 35px);
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.marinade h3.active +  ul{
+    display: block;
+} 
+
+.instructions h3.active +  ul{
+    display: block;
+} 
+
+ul li{
+    line-height: 10px;
+    font-size: clamp(18px, 6vw, 25px);
+}
+
+.marinade h3 img,
+.instructions h3 img{
+    width: 20px;
+    margin-left: 20px;
+    
+}
+
+.marinade ul,
+.instructions ul{
+    display: none;
+}
+
+.marinade ul li,
+.instructions ul li{
+    list-style: none;
+}
+
+@media screen and (max-width: 1620px) {
+    .ingredients .btn-ingredient{
+        right:unset;
+        left: 0;
+        z-index: 1;
+        width: 35px;
+        border-top-right-radius: unset;
+        border-top-right-radius: unset;
+    }
+    
+    main:hover .btn-ingredient{
+        right: unset;
+    }
+    
+    .liste-ingredient{
+        z-index: 1;
+        top: 0;
+        right: unset;
+        left: 0;
+        border-top-right-radius: unset;
+    }
+}
+
+
+    
+    .info p,
+    ul li{
+        line-height: 30px;
+    }
+    
+
+
+@media screen and (max-width:425px) {
+
+    main{
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .block-instruction{
+        padding:20px;
+    }
+
+    .liste-ingredient{
+        width: 100%;
+        border-radius: unset;
+    }
+
+}
+
+/**********comments*************/
+
+.commentaires {
+    margin-top: 0px;
+  }
+  
+  .commentaires h3 {
+    font-size: 25px;
+    text-decoration: underline;
+    color: #030404;
+    margin-bottom: 10px;
+  }
+  
+  .commentaire {
+    border: 1px solid #ffffff;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .commentaire p {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .commentaire strong {
+    font-weight: bold;
+
+  }
+  
+  .commentaire p:first-of-type {
+    font-size: 20px;
+  }
+  
+  .commentaire p:nth-of-type(2) {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .commentaire p:nth-of-type(3) {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  label[for="commentaire"] {
+    display: block;
+
+  }
+  
+  textarea#commentaire {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #d9efe8;
+    border-radius: 5px;
+    resize: vertical;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    font-size: 15px;
+  }
+  
+  input[type="hidden"][name="id_recette"] {
+    display: none;
+  }
+  
+  button[type="submit"] {
+    background-color: rgb(214, 201, 178);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #ffffff;
+  }
+  
+  .liste-commentaires{
+    font-size: 15px;
+    text-decoration: underline;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  
+  .rating {
+    display: inline-block;
+    direction: rtl;
+    
+  }
+  
+  .rating input[type="radio"] {
+    display: none;
+  
+  }
+  
+  .rating label {
+    color: #14523d;
+    font-size: 25px;
+    padding: 5px;
+    float: right;
+    cursor: pointer;
+    
+  }
+  
+  .rating input[type="radio"]:checked ~ label {
+    color: rgb(225, 206, 77);
+  }

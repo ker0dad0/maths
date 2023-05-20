@@ -1,0 +1,159 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #ffffff;
+}
+
+
+
+a{
+    text-decoration: none;
+    font-family: 'Karma', serif;
+}
+
+.titre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+}
+
+.titre h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 50px;
+    width: 100%; 
+    font-weight: lighter;
+    color: #f7f7f7;
+    background: #1d0606;
+}
+
+.titre img{
+    max-width: 50px;
+    width: 10%;
+}
+
+nav{
+    position: absolute;  
+    z-index: -1;
+    text-align: center;
+    bottom: 0;
+    font-size: 30px;
+    letter-spacing: 2px;
+    height: 50px; 
+    width: 100%;
+    transition: bottom 0.2s ease-in-out;
+    border-bottom: 1px solid black;
+    background: #cbbfbf;
+}
+
+.titre:hover nav{
+    bottom:  -49px;
+}
+
+nav a{
+    position: relative;
+    color: rgb(35, 32, 32);
+    font-weight: 900;
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background-color: rgb(35, 28, 28);
+    transition: width 0.2s ease-in-out;
+}
+
+nav a:hover::after{
+    width: 80%;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(214, 201, 178);
+    color: rgb(214, 201, 178);
+}
+
+
+
+section {
+    background-color: #ffffff;
+    padding: 40px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+section h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+section a {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: rgb(214, 201, 178);
+    text-decoration: underline;
+    font-weight: 800;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin: 5px 0;
+    padding: 5px 5px;
+    outline: 0;
+    border: 1px solid#000;
+    border-radius: 6px;
+}
+
+
+
+form input[type='submit'] {
+    background-color: rgb(214, 201, 178);
+    border: 0;
+    font-size: 15px;
+    color: #ffffff;
+    margin-top: 15px;
+    padding: 6px 0;
+
+}
+
+form textarea {
+    margin: 5px 0;
+    padding: 5px 5px;
+    outline: 0;
+    border: 1px solid#000;
+    border-radius: 6px;
+}
